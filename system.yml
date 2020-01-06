@@ -2,8 +2,12 @@
 ---
 - hosts: office
   tasks:
-  - name:
+  - name: création d'un utilisateur
     user:
       name: itesciadmin1
+  - name: Déployer le package
+    package:
+      name: vim
+      state: present
  
 
