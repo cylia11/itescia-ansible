@@ -1,0 +1,9 @@
+
+---
+- hosts: office
+  tasks:
+  - name:
+    user:
+      name: itesciadmin1
+ 
+
