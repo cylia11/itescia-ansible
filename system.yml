@@ -1,5 +1,6 @@
 
 ---
+#test
 - hosts: office
   tasks:
   - name: création d'un utilisateur
