@@ -11,5 +11,5 @@
   authorized_key:
     user: "{{ item }}"
     state: present
-    key: "{{ lookup('file', '~/itescia-ansible/keys/id_rsa.pub') }}"
+    key: "{{ lookup('file', '~/itescia-ansible/keys/{{ item }}.pub') }}"
   loop: "{{ list_users }}"
