@@ -5,9 +5,10 @@
   - name: création d'un utilisateur
     user:
       name: itesciadmin1
+      create_home: yes
   - name: Déployer le package
     package:
-      name: vim
+      name: htop
       state: present
  
 
