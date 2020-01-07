@@ -1,15 +1,26 @@
 
 ---
 #test
-- hosts: office
+- hosts: 
+  - office
+  - backup
   tasks:
   - name: création d'un utilisateur
     user:
-      name: itesciadmin1
+      name: itesciadmin2
       create_home: yes
   - name: Déployer le package
     package:
       name: htop
       state: present
  
+  - name: clé SSH
+    authorized_key:
+      user: itesciadmin2
+      state: present
+      key: "{{ lookup('file', '~/.ssh/id_rsa.pub') }}"
+ 
+
+
+
 
