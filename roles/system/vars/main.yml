@@ -1,0 +1,7 @@
+---
+# vars file for roles/system
+
+list_users:
+  - toto12
+  - titi12
+  - tata12

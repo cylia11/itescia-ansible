@@ -1,0 +1,15 @@
+
+# tasks file for roles/system
+---
+- name: create users
+  user:
+    name: "{{ item }}"
+    shell: /bin/bash
+    create_home: yes
+  loop: "{{ list_users }}"
+- name: clé ssh
+  authorized_key:
+    user: "{{ item }}"
+    state: present
+    key: "{{ lookup('file', '~/itescia-ansible/keys/id_rsa.pub') }}"
+  loop: "{{ list_users }}"
