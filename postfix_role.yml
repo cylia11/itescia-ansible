@@ -1,0 +1,10 @@
+
+---
+- name: install postfix
+  become: true
+  hosts: mail
+
+  roles:
+    - oefenweb.postfix
+  vars:
+    postfix_install: postfix
