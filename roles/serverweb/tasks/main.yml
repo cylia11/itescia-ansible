@@ -1,0 +1,7 @@
+---
+# tasks file for roles/serverweb
+- name: install apache
+  apt: name=apache2
+- name: install php
+  apt: name=php
+

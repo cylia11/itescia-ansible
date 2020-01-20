@@ -1,0 +1,5 @@
+---
+- name: create user with role
+  hosts: serverweb
+  roles:
+    - role: system
