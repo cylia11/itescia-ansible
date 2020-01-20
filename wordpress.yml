@@ -2,4 +2,4 @@
 - name: Install and Configure Wordpress
   hosts: serverweb
   roles:
-    - wordpress
+    - role: berkayozuygur.wordpress
