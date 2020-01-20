@@ -1,0 +1,10 @@
+
+---
+- name: installation serveur web
+  hosts: serverweb
+  become: true
+  tasks:
+    - name: install apache
+      apt: name=apache2
+    - name: install php
+      apt: name=php
