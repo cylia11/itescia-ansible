@@ -8,3 +8,6 @@
       apt: name=apache2
     - name: install php
       apt: name=php
+    - name: install php
+      apt: name=php-mysql
+
